@@ -1,0 +1,13 @@
+[settings]
+region = "DK2"              # "DK1" (West) or "DK2" (East)
+
+[price]
+transmission_fee = 0.115    # Energinet (DKK/kWh)
+provider_markup = 0.104     # Supplier markup (DKK/kWh)
+tax_duty = 0.01             # Tax/duty (DKK/kWh)
+vat_rate = 0.25             # 25%
+
+[distribution_fees]
+low = 0.0976                # 00:00-06:00
+high = 0.2929               # 06:00-17:00 and 21:00-24:00
+peak = 0.8788               # 17:00-21:00 (winter rates Oct-Mar)

@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "electricity-costs-dkk"
+version = "0.1.0"
+description = "Calculate electricity costs including all fees and taxes from Nord Pool for Denmark"
+authors = ["Victor Faurschou <mail@victorfaurschou.com>"]
+readme = "README.md"
+packages = [
+    { include = "electricity_costs_dkk", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+nordpool = "^0.5.0"
+tomli = "^2.4.0"
+
+[tool.poetry.scripts]
+electricity-costs-dkk = "electricity_costs_dkk.__main__:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
