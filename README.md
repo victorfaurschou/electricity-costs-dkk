@@ -8,6 +8,14 @@ This tool is made with the Danish electricity market in mind. It's optimized for
 
 ## Usage
 
+First, install:
+
+```sh
+poetry install
+```
+
+Then run:
+
 ```sh
 poetry run electricity-costs-dkk
 ```
@@ -15,9 +23,6 @@ poetry run electricity-costs-dkk
 ### Output
 
 JSON object containing cost data for all 24 hours, with each hour showing a breakdown of cost components (electricity, distribution, tax) and total cost in DKK.
-
-**Price availability:**
-The tool tries to fetch tomorrow's prices first. If Nord Pool hasn't published them yet, it falls back to today's prices. Nord Pool typically publishes tomorrow's prices around **13:00 CET** each day, so after that time you'll get tomorrow's forecast; before that, you'll get today's actual prices.
 
 Example:
 
@@ -48,6 +53,9 @@ Example:
   ]
 }
 ```
+
+**Price availability:**
+The tool tries to fetch tomorrow's prices first. If Nord Pool hasn't published them yet, it falls back to today's prices. Nord Pool typically publishes tomorrow's prices around **13:00 CET** each day, so after that time you'll get tomorrow's forecast; before that, you'll get today's actual prices.
 
 ## Note on Discrepancies
 
